@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>
+	<p>
+		I once went to <span id="noun1"></span>. It was so <span id="adjective1"></span> I had to <span id="verb1"></span>. 
+	</p>
+</div>
+<script type="text/javascript">
+	var noun1 = window.prompt("Provide a random noun");
+	var verb1 = window.prompt("Provide a random verb");
+	var adjective1 = window.prompt("Provide a random adjective");
+	document.querySelector('#noun1').textContent = noun1;
+	document.querySelector('#verb1').textContent = verb1;
+	document.querySelector('#adjective1').textContent = adjective1;
+</script>
+</body>
+</html>

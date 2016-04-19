@@ -1,0 +1,11 @@
+var name = "John";
+var age = 29;
+var birthday = "18 February";
+var hometown = "Cambridge";
+var occupation = "Entrepreneuer";
+var favoriteFood = "Pizza";
+var bestFriend = "Jasond";
+var wife = "Amy";
+var dog = "Rex";
+var address = "Chesterton Road";
+console.log("My name is " + name + ", I'm a " + age + " year old " + occupation + " born on " + birthday + ". My best friend is " + bestFriend + ".");

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="source">The source goes here</div>
+<div id="destination">The destination goes here</div>
+<div id="swap_1">Swap 1 was here</div>
+<div id="swap_2">Swap 2 was here</div>
+<script type="text/javascript">
+	var source = document.querySelector('#source').textContent;
+	document.querySelector('#destination').textContent = source;
+	var swap_1 = document.querySelector('#swap_1').textContent;
+	var swap_2 = document.querySelector('#swap_2').textContent;
+	document.querySelector('#swap_1').textContent = swap_2;
+	document.querySelector('#swap_2').textContent = swap_1;
+</script>
+</body>
+</html>

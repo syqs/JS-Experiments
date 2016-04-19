@@ -1,0 +1,47 @@
+<!-- Exercise: Create a "choose your own adventure" style text adventure game by using multiple prompts and branching if/ else conditional statements. Write a story into the HTML document on the basis of the user's responses to the prompts. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div id="game_window">
+		<p>Welcome to the Matrix!</p>
+		</div>
+		<script type="text/javascript">
+			//Setup some basic variables that we will need for the game mechanics
+			var response;
+			//Ask user to take blue or red pill
+			alert("Welcome, let's begin...")
+			response = prompt("After this, there is no turning back. You take the blue pill -- the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill -- you stay in Wonderland and I show you how deep the rabbit hole goes. - RED or BLUE?").toUpperCase() || "";
+			//If choice is blue then end game otherwise continue
+			console.log(response);
+			if (response === "BLUE") {
+				document.querySelector('#game_window, p').texContent = "Sorry, you can go no further. GAME OVER.";
+			//if no choice or invalid choice ask to try again
+			} else if (response !== "RED") {
+				response = alert("You've made an invalid choice. Refresh to try again");
+			// otherwise continue game. Ask some questions.
+			} else {
+				response = prompt("Well done, now its your turn to ask a question. Type the number that corresponds to your question:\n1: What is the Matrix?\n2: How did I get here?\n3: Are you really Morpheous?");
+				// if option 1 is chosen, ask to see Matrix (use == instead of ===)
+				if (response == 1) {
+					response = prompt("Unfortunately, no one can be told what the Matrix is. You have to see it for yourself.\nWould you like to see the Matrix? - YES OR NO.").toUpperCase();
+					//show the Matrix or be shot in head (ternary operator here for fun)
+					response === "YES" ? alert("The Matrix is a system, Neo. That system is our enemy. But when you're inside, you look around, what do you see? Businessmen, teachers, lawyers, carpenters. The very minds of the people we are trying to save. But until we do, these people are still a part of that system and that makes them our enemy. You have to understand, most of these people are not ready to be unplugged. And many of them are so inured, so hopelessly dependent on the system, that they will fight to protect it. Well done, you've see the Matrix!") : alert("Ok then, an agent just shot you in the head. GAME OVER.");
+				}
+				// if option 2 is chosen, ask to see Matrix (use == instead of ===)
+				else if (response == 2) {
+					response = prompt("You chose to be here.\nWould you like to see the Matrix? - YES OR NO.").toUpperCase();	
+					//show the Matrix or be shot in head (ternary operator here for fun)
+					response === "YES" ? alert("The Matrix is a system, Neo. That system is our enemy. But when you're inside, you look around, what do you see? Businessmen, teachers, lawyers, carpenters. The very minds of the people we are trying to save. But until we do, these people are still a part of that system and that makes them our enemy. You have to understand, most of these people are not ready to be unplugged. And many of them are so inured, so hopelessly dependent on the system, that they will fight to protect it. Well done, you've see the Matrix!") : alert("Ok then, an agent just shot you in the head. GAME OVER.");
+				}
+				else if (response == 3) {
+					response = prompt("Yes, ofcourse I am.\nWould you like to see the Matrix? - YES OR NO.").toUpperCase();	
+					//show the Matrix or be shot in head (ternary operator here for fun)
+					response === "YES" ? alert("The Matrix is a system, Neo. That system is our enemy. But when you're inside, you look around, what do you see? Businessmen, teachers, lawyers, carpenters. The very minds of the people we are trying to save. But until we do, these people are still a part of that system and that makes them our enemy. You have to understand, most of these people are not ready to be unplugged. And many of them are so inured, so hopelessly dependent on the system, that they will fight to protect it. Well done, you've see the Matrix!") : alert("Ok then, an agent just shot you in the head. GAME OVER.");
+				}
+			}
+		</script>
+	</body>
+</html>

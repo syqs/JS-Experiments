@@ -1,0 +1,25 @@
+<!-- product = 1 * 2 * 3 * 4
+product *= n -->
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="ham"></div>
+<script type="text/javascript">
+	var n = 5,
+	count = 1,
+	sum = 1;
+
+	while(count <= n){
+		sum *= count;
+		count++;
+		count%2==1 ? document.querySelector('#ham').innerHTML += "<p class='odd' style='color: red'>The product of the numbers 1 through " + (n) + " is " + sum + "</p>" : document.querySelector('#ham').innerHTML += "<p class='even' style='color: green'>The product of the numbers 1 through " + (n) + " is " + sum + "</p>";
+	}
+	
+// condtion ? exp1 : exp2
+	console.log("The product of the numbers 1 through " + (n) + " is " + sum);
+</script>
+</body>
+</html>

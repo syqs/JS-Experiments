@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var n = 0,
+		conditionNum = 20,
+		unluckyNum = 13;
+
+	while ( n <= conditionNum ) { //check if n is less / equal to 20
+	  if ( n !== unluckyNum && n % 2 === 0 ) {
+	    console.log("I like the number " + n + ", a nice even number.");
+	  	} else if ( n !== unluckyNum && n % 2 !== 0 ) {
+	    console.log("I like the number " + n + ", odd is okay too!");
+	  	} else {
+	    console.log("la-la-la, nothing to say here");
+	  	}
+ 	  n++;
+}
+</script>
+</body>
+</html>

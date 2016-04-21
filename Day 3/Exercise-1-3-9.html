@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var input,
+				computerRand,
+				pcChoice,
+				playAgain,
+				repeat = true;
+			while (repeat) {		
+				while(!(input = prompt("Enter R, P or S").toUpperCase()) && repeat === true) {
+					alert("Please enter R, P or S");
+				}
+				computerRand = Math.random();
+				if(computerRand < 0.33) {
+					input += "R";
+				} else if (computerRand > 0.34 && computerRand <0.66) {
+					input += "P";
+				} else {
+					input += "S";
+				}
+				switch (input) {
+					case "RR" : alert("Its a draw!")
+					break;
+					case "PP" : alert("Its a draw!")
+					break;
+					case "SS" : alert("Its a draw!")
+					break;
+					case "RP" : alert("Computer Wins!")
+					break;
+					case "RS" : alert("You Win!")
+					break;
+					case "SR" : alert("Computer Wins!")
+					break;
+					case "SP" : alert("You Win!")
+					break;
+					case "PR" : alert("You Win!")
+					break;
+					case "PS" : alert("Computer Wins!")
+					break;
+				}
+				playAgain = prompt("Play again, YES or NO?").toUpperCase();
+				if (playAgain === "NO"){
+					repeat = false;
+				} else if (playAgain === "YES") {
+					repeat = true;
+					input = "";
+					playAgain = "";
+				}
+			}
+		</script>
+	</body>
+</html>

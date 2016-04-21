@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var n,
+				randNum,
+				guessCount = 1,
+				guess;
+			while (!(n = parseInt(prompt("Choose a number")))) {
+				alert("Please choose a number!");
+			}
+			randNum = Math.ceil( Math.random() * n );
+			while (true) {
+				guess = parseInt(prompt("Guess which number?"));
+				if (guess === randNum) {
+					alert("Well done, you guessed correctly. The correct number was: " + randNum + ". You took " + guessCount + " guesses.");
+					break;
+				} else if (guess > randNum) {
+					alert("To high, try again...");
+				} else {
+					alert("To low try again");
+				}
+				guessCount++;
+			}
+		</script>
+	</body>
+</html>

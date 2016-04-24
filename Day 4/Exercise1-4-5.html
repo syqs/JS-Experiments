@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://code.jquery.com/jquery-2.2.2.js"></script>
+		<style type="text/css">
+		 h1 {display: none;}
+		 li {display: none;}
+		 #thing {display: none;}
+		</style>
+	</head>
+	<body>
+		<h1>Title of our page!</h1>
+		<p id='secret'>This is the secret paragraph.</p>
+		<ol>
+			<li>line one</li>
+			<li>line two</li>		
+		</ol>
+		<p class="comments">Test text.</p>
+		<div id="thing">Some text for the Thing ID</div>
+		<p id="message">Message text!</p>
+		<p class="aler">ALERT ALERT!/p>
+	<script type="text/javascript">
+		//$('h1').show('slow');	
+		//$('p#secret').hide(1250);
+		//$('ol li').fadeIn();
+		//$('.comments').fadeOut();
+		//$('div#thing').slideDown();
+		$('#message').slideUp();
+		$('.alert').slideToggle();
+	</script>
+	</body>
+</html>

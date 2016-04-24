@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	</head>
+	<body>
+	<div id="color">This is some text.</div>
+	<img />
+
+	</body>
+	<script type="text/javascript">
+			var i; 
+			while(!(i = prompt("What color of backround do you want? (green, red or blue").toLowerCase())) {
+				alert('Please enter a color.');
+			}
+			if(i === "blue") {
+				$('body').css('background', 'AliceBlue');
+				$('#color').css('color', 'Blue');
+				$('#color').css('border',  'solid DarkBlue 2px');
+				$('img').attr('src', 'http://i.imgur.com/nWGCwiE.gif'); 
+			}
+			if(i === "red") {
+				$('body').css('background', 'Crimson');  
+				$('#color').css('color', 'DarkRed');  
+				$('#color').css('border',  'solid FireBrick 2px');
+				$('img').attr('src', 'http://i.imgur.com/C8k9MTe.png');   
+			}
+			if(i === "green") {
+				$('body').css('background', 'PaleGreen');
+				$('#color').css('color', 'Green');
+				$('#color').css('border',  'solid SeaGreen 2px');
+				$('img').attr('src', 'http://i.imgur.com/zN1yQEb.jpg'); 
+			}
+
+	</script>
+</html>

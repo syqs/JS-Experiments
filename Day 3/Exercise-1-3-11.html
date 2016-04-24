@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div id="output"></div>	
+
+		<script type="text/javascript">
+			// Setup the variables needed for the program
+			var interestRate,
+				startBal,
+				targetBal,
+				finalBal,
+				investPeriods = 0;
+			// Prompt user for input
+			startBal = parseInt(prompt("Enter your starting balance for your savings plan. \nI.e $100 = 100"));
+			targetBal = parseInt(prompt("Choose the target balance you would like to achieve. \nI.e $500 = 500"));
+			interestRate = parseFloat(prompt("Enter your interest rate.\nI.e %5 = 0.05"));
+			finalBal = startBal;
+			// Run While loop to do calculation
+			while (finalBal < targetBal) {
+				finalBal = finalBal + (finalBal * interestRate); // Begin adding interest 
+				investPeriods++;	
+			}
+			// Print out the results
+			document.querySelector('#output').textContent = "To grow an initial investment of $" + startBal + " to $" + targetBal + " at " + interestRate + "% will require " + investPeriods + " periods / months.";
+		</script>
+	</body>
+</html>
+

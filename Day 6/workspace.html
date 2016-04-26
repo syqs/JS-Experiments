@@ -1,0 +1,25 @@
+<html>
+ <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+ </head>
+
+ <body>
+  <div id="output"></div>
+ </body>
+</html>
+
+<script>
+function logDate() {
+	console.log(new Date());
+}
+
+function appendText(inputText) {
+	var text = inputText || "Wow! Awesome! Yaaaaaay!";
+	$('#output').append(text);
+}
+
+for (i=0; i <= 24; i++) {
+	appendText();
+}
+
+</script>

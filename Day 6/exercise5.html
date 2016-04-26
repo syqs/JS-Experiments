@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="output"></div>
+<script type="text/javascript">
+function string_printer(inputString) {
+	$('#output').text(inputString);
+}
+function funny_sentences(noun, adjective, verb, adverb) {
+	var sentence = '<span style="color: red">' + adjective + '</span><span style="color: green">' + noun + '</span><span style="color: blue">'  + verb + '</span><span style="color: yellow">' + adverb + '</span>';
+	$('#output').append(sentence);
+}
+</script>
+</body>
+</html>

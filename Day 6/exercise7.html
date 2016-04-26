@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="output"></div>
+		<script>
+		function this_that(word1, word2, count_up_to, fizz_num, buzz_num) {
+			var	i = 1,
+				output,
+				myString;
+
+				while (i <= count_up_to) {
+					output = "";
+					myString = "";
+					if (i % fizz_num === 0) {
+						output += word1;
+					}
+					if (i % buzz_num === 0) {
+						output += word2;
+					}	
+					myString += output ||  i;
+					i++;
+					$('#output').append('<div>' + myString + '</div>');
+				}
+		}
+		this_that('that', 'this', 99, 4, 7);
+</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<script type="text/javascript">
+	//write function
+	function get_sentence() {
+		var randomVar = Math.floor(Math.random()*3);
+			
+		if (randomVar === 0) {
+			return "This is a random(ish) sentence!";
+		} else if (randomVar === 1){
+			return "This even more random! Maybe.";
+		} else {
+			return "Another semi random";
+		}
+	}
+	// run while loop
+	i = 0;
+	while (i < 10) {
+		$('body').append("<p>" + get_sentence() + "</p>" );
+		i++;
+	}
+</script>
+</body>
+</html>
